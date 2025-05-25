@@ -1,0 +1,73 @@
+NOTICE file for celestial-nav-events (CelestialNavigationEvents)
+
+This NOTICE file is provided in compliance with section 4(d) of the Apache License, Version 2.0.
+
+---
+
+Project: CelestialNavigationEvents
+Description: A Kotlin library for calculating Sun ☀️ and Moon 🌕 astronomical events for navigation 🧭 purposes.
+Author: Maxim Sagaciyang
+Repository: https://github.com/MSagGik/celestial-nav-events
+Copyright: 2025 Maxim Sagaciyang
+License: Apache License, Version 2.0 — https://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+This software is distributed under the Apache License, Version 2.0 (the "License").
+You may not use this file except in compliance with the License.
+A copy of the License is available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+---
+
+### Legal Disclaimer and Liability
+
+This library ("CelestialNavigationEvents") is provided under the Apache License, Version 2.0 ("License").
+Use, distribution, or modification of this library implies acceptance and compliance with the License terms, available at http://www.apache.org/licenses/LICENSE-2.0.
+
+NO WARRANTY
+The library is provided "AS IS", without any warranties or conditions, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. Use of this library is at your own risk. The author and contributors disclaim all liability for any damages arising directly or indirectly from its use.
+
+LIMITATION OF LIABILITY
+Under no circumstances shall the author or contributors be liable for any damages (including incidental, consequential, or punitive damages) resulting from use, misuse, or inability to use this library, even if advised of the possibility of such damages.
+
+PERMISSIONS AND OBLIGATIONS
+You may use, modify, distribute, and sublicense this library in compliance with the License. All copyright notices and license texts must be preserved in redistributions.
+
+ASTRONOMICAL CALCULATIONS USAGE
+This library provides approximate astronomical event calculations based on publicly available scientific formulas. It is intended for general-purpose applications such as UI theming, photography planning, and navigation tools. It is **not** intended for professional astronomical or mission-critical systems. Users must verify suitability and accuracy for their use cases and assume responsibility for any consequences.
+
+CHANGES TO THIS NOTICE
+This legal notice may be updated at any time without prior notice. Continued use constitutes acceptance of such changes.
+
+---
+
+### Attribution and Third-Party Licenses
+
+This project uses third-party components, each under their respective open-source licenses.
+See the file `THIRD-PARTY-NOTICES` for a full list of third-party technologies, license names, access dates, and links.
+
+---
+
+### Trademarks and Affiliations
+
+This library uses standard Kotlin and Java APIs, but it does not include, redistribute, or modify these platforms. Usage complies with their respective open-source licenses.
+
+This project is not affiliated with JetBrains, Oracle, or any other organization mentioned in related documentation.
+All trademarks and brand names belong to their respective owners.
+
+---
+
+### Legal Disclaimer: Forks and Derivative Works
+
+Any forks, modifications, or derivative works of this repository are separate and independent projects.
+They are not reviewed, endorsed, supported, or maintained by the original author or contributors.
+The original author and contributors disclaim all warranties and accept no liability for any damages, losses, or consequences arising from any forks, modifications, or derivative works.
+Use, modification, or redistribution of this project or any of its parts constitutes irrevocable acceptance of these terms and the assumption of full responsibility for compliance with applicable laws and licenses.
