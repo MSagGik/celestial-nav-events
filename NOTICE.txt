@@ -5,10 +5,10 @@ This NOTICE file is provided in compliance with section 4(d) of the Apache Licen
 ---
 
 Project: CelestialNavigationEvents
-Description: A Kotlin library for calculating Sun ☀️ and Moon 🌕 astronomical events for navigation 🧭 purposes.
-Author: Maxim Sagaciyang
+Description: A Kotlin library for calculating Sun and Moon astronomical events for navigation purposes.
+Author: Maxim Sagaciyan
 Repository: https://github.com/MSagGik/celestial-nav-events
-Copyright: 2025 Maxim Sagaciyang
+Copyright: 2025 Maxim Sagaciyan
 License: Apache License, Version 2.0 — https://www.apache.org/licenses/LICENSE-2.0
 
 ---

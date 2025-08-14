@@ -73,9 +73,7 @@ publishing {
                 developers {
                     developer {
                         id.set("MSagGik")
-                        name.set("Maxim Sagaciyang")
-                        email.set("dev.saggik@yandex.com")
-                        url.set("https://msaggik.github.io")
+                        email.set("dev.saggik@gmail.com")
                     }
                 }
 

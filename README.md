@@ -76,7 +76,7 @@ All calculations run locally; no internet connection is required.
 
    ```kotlin
    dependencies {
-       implementation("com.github.MSagGik:celestial-nav-events:1.0.0-beta1")
+       implementation("com.github.MSagGik:celestial-nav-events:1.0.0-beta2")
    }
    ```
 
@@ -296,7 +296,7 @@ Failure to include the `NOTICE` file in its entirety constitutes a breach of the
 By redistributing this project or derivative works without including the `NOTICE` file, you assume full responsibility for any resulting legal or compliance issues.  
 The original author and contributors **expressly disclaim** any liability or responsibility arising from your failure to comply with these requirements.
 
-> ⚠️ `CelestialNavigationEvents` is an open-source project and is not affiliated with JetBrains, Oracle, or any other entity. All trademarks and brand names used in this project (such as "Kotlin", "Java") are the property of their respective owners.
+> ⚠️ `CelestialNavigationEvents` is an open-source project and is not affiliated with JetBrains, Oracle, Apache Software Foundation, or any other entity. All trademarks and brand names used in this project (such as "Kotlin", "Java", "Apache") are the property of their respective owners.
 > Use of third-party trademarks is for identification purposes only and does not imply any endorsement by or affiliation with the respective trademark holders.
 >
 > This project is provided "as is", without warranty of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and noninfringement.
