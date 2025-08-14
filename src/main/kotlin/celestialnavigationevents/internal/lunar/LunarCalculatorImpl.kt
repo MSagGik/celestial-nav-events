@@ -101,7 +101,7 @@ internal class LunarCalculatorImpl : LunarEventsCalculator {
             longitude = longitude,
             dateTime = dateTime
         )
-        val defaultLunarAbsoluteEventDay = LunarAbsoluteEventDay.Companion.getDefaultLunarAbsoluteEventDay()
+        val defaultLunarAbsoluteEventDay = LunarAbsoluteEventDay.getDefaultLunarAbsoluteEventDay()
 
         val preHorizonCrossingLunarState: HorizonCrossingLunarState = calculateLunarEventDay(
             latitude = latitude,
@@ -194,7 +194,7 @@ internal class LunarCalculatorImpl : LunarEventsCalculator {
             dateTime = dateTime
         )
 
-        val defaultLunarRelativeEventDay = LunarRelativeEventDay.Companion.getDefaultLunarRelativeEventDay()
+        val defaultLunarRelativeEventDay = LunarRelativeEventDay.getDefaultLunarRelativeEventDay()
 
         val preHorizonCrossingLunarState: HorizonCrossingLunarState = calculateLunarEventDay(
             latitude = latitude,

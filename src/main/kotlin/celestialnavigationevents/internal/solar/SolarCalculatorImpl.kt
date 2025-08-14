@@ -111,7 +111,7 @@ internal class SolarCalculatorImpl : SolarEventsCalculator {
             longitude = longitude,
             dateTime = dateTime
         )
-        val defaultSolarAbsoluteEventDay = SolarAbsoluteEventDay.Companion.getDefaultSolarAbsoluteEventDay()
+        val defaultSolarAbsoluteEventDay = SolarAbsoluteEventDay.getDefaultSolarAbsoluteEventDay()
 
         val preHorizonCrossingSolarState: HorizonCrossingSolarState = calculateSolarEventDay(
             latitude = latitude,
@@ -199,7 +199,7 @@ internal class SolarCalculatorImpl : SolarEventsCalculator {
             longitude = longitude,
             dateTime = dateTime
         )
-        val defaultSolarRelativeEventDay = SolarRelativeEventDay.Companion.getDefaultSolarRelativeEventDay()
+        val defaultSolarRelativeEventDay = SolarRelativeEventDay.getDefaultSolarRelativeEventDay()
 
         val preHorizonCrossingSolarState: HorizonCrossingSolarState = calculateSolarEventDay(
             latitude = latitude,

@@ -104,8 +104,8 @@ internal object LunarUtils {
 
         daysSinceEpoch += timeZoneShift
 
-        val lunarToday = Position.Companion.calculateMoonPosition(daysSinceEpoch)
-        var lunarTomorrow = Position.Companion.calculateMoonPosition(daysSinceEpoch + 1)
+        val lunarToday = Position.calculateMoonPosition(daysSinceEpoch)
+        var lunarTomorrow = Position.calculateMoonPosition(daysSinceEpoch + 1)
         lunarTomorrow = AstronomicalUtility.adjustForNextAscension(lunarToday, lunarTomorrow)
 
         val ageInDays = calculateAgeOfMoon(jd + 1.0)
@@ -263,8 +263,8 @@ internal object LunarUtils {
                 lightMilliseconds += lastTime
             }
 
-            visibleLength = Time.Companion.fromTotalMilliseconds(lightMilliseconds)
-            invisibleLength = Time.Companion.fromTotalMilliseconds(darkMilliseconds)
+            visibleLength = Time.fromTotalMilliseconds(lightMilliseconds)
+            invisibleLength = Time.fromTotalMilliseconds(darkMilliseconds)
 
         } else {
             when (type) {
@@ -299,7 +299,7 @@ internal object LunarUtils {
                 type == HorizonCrossingLunarState.RISEN_AND_SET
             ) {
                 visibleLength?.let { visibleLength ->
-                    Time.Companion.fromTotalMilliseconds(prevTime + visibleLength.toTotalMilliseconds() / 2)
+                    Time.fromTotalMilliseconds(prevTime + visibleLength.toTotalMilliseconds() / 2)
                 }
             } else if (events.first().type == EventType.SET &&
                 type == HorizonCrossingLunarState.SET_AND_RISEN
@@ -307,9 +307,9 @@ internal object LunarUtils {
                 visibleLength?.let { visibleLength ->
                     val halfVisibleLength = visibleLength.toTotalMilliseconds() / 2
                     if (prevTime - halfVisibleLength >= 0) {
-                        Time.Companion.fromTotalMilliseconds(prevTime - halfVisibleLength)
+                        Time.fromTotalMilliseconds(prevTime - halfVisibleLength)
                     } else {
-                        Time.Companion.fromTotalMilliseconds(
+                        Time.fromTotalMilliseconds(
                             Time(
                                 days = 1,
                                 hour = 0,
@@ -344,9 +344,9 @@ internal object LunarUtils {
                 invisibleLength?.let { invisibleLunarLength ->
                     val halfInvisibleLength = invisibleLunarLength.toTotalMilliseconds() / 2
                     if (prevTime - halfInvisibleLength >= 0) {
-                        Time.Companion.fromTotalMilliseconds(prevTime - halfInvisibleLength)
+                        Time.fromTotalMilliseconds(prevTime - halfInvisibleLength)
                     } else {
-                        Time.Companion.fromTotalMilliseconds(
+                        Time.fromTotalMilliseconds(
                             Time(
                                 days = 1,
                                 hour = 0,
@@ -359,7 +359,7 @@ internal object LunarUtils {
                 type == HorizonCrossingLunarState.SET_AND_RISEN
             ) {
                 invisibleLength?.let { invisibleLunarLength ->
-                    Time.Companion.fromTotalMilliseconds(prevTime + invisibleLunarLength.toTotalMilliseconds() / 2)
+                    Time.fromTotalMilliseconds(prevTime + invisibleLunarLength.toTotalMilliseconds() / 2)
                 }
             } else {
                 null

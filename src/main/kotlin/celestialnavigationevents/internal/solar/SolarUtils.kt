@@ -300,15 +300,15 @@ internal object SolarUtils {
             if (cleanDayMillis == 0L && cleanNightMillis == 0L) {
                 lowerSolarEventDay.dayLength to lowerSolarEventDay.nightLength
             } else {
-                Time.Companion.fromTotalMilliseconds(cleanDayMillis) to
-                        Time.Companion.fromTotalMilliseconds(cleanNightMillis)
+                Time.fromTotalMilliseconds(cleanDayMillis) to
+                        Time.fromTotalMilliseconds(cleanNightMillis)
             }
         }
 
         return SolarRingEventDay(
             events = magicEventList,
             daylightBeforeRing = daylightBeforeRing,
-            ringDuration = Time.Companion.fromTotalMilliseconds(ringDuration),
+            ringDuration = Time.fromTotalMilliseconds(ringDuration),
             darknessAfterRing = darknessAfterRing
         )
     }
@@ -367,8 +367,8 @@ internal object SolarUtils {
 
         daysSinceEpoch += timeZoneShift
 
-        val sunToday = Position.Companion.calculateSunPosition(daysSinceEpoch)
-        var sunTomorrow = Position.Companion.calculateSunPosition(daysSinceEpoch + 1)
+        val sunToday = Position.calculateSunPosition(daysSinceEpoch)
+        var sunTomorrow = Position.calculateSunPosition(daysSinceEpoch + 1)
         sunTomorrow = AstronomicalUtility.adjustForNextAscension(sunToday, sunTomorrow)
 
         return calculateAstronomicalSolarEvent(
@@ -515,8 +515,8 @@ internal object SolarUtils {
                 lightMilliseconds += lastTime
             }
 
-            dayLength = Time.Companion.fromTotalMilliseconds(lightMilliseconds)
-            nightLength = Time.Companion.fromTotalMilliseconds(darkMilliseconds)
+            dayLength = Time.fromTotalMilliseconds(lightMilliseconds)
+            nightLength = Time.fromTotalMilliseconds(darkMilliseconds)
 
         } else {
             when (type) {
@@ -553,7 +553,7 @@ internal object SolarUtils {
                 type == HorizonCrossingSolarState.RISEN_AND_SET
             ) {
                 dayLength?.let { dayLength ->
-                    Time.Companion.fromTotalMilliseconds(prevTime + dayLength.toTotalMilliseconds() / 2)
+                    Time.fromTotalMilliseconds(prevTime + dayLength.toTotalMilliseconds() / 2)
                 }
             } else if (events.first().type == EventType.SET &&
                 type == HorizonCrossingSolarState.SET_AND_RISEN
@@ -561,9 +561,9 @@ internal object SolarUtils {
                 dayLength?.let { dayLength ->
                     val halfDayLength = dayLength.toTotalMilliseconds() / 2
                     if (prevTime - halfDayLength >= 0) {
-                        Time.Companion.fromTotalMilliseconds(prevTime - halfDayLength)
+                        Time.fromTotalMilliseconds(prevTime - halfDayLength)
                     } else {
-                        Time.Companion.fromTotalMilliseconds(
+                        Time.fromTotalMilliseconds(
                             Time(
                                 days = 1,
                                 hour = 0,
@@ -600,9 +600,9 @@ internal object SolarUtils {
                 nightLength?.let { nightLength ->
                     val halfNightLength = nightLength.toTotalMilliseconds() / 2
                     if (prevTime - halfNightLength >= 0) {
-                        Time.Companion.fromTotalMilliseconds(prevTime - halfNightLength)
+                        Time.fromTotalMilliseconds(prevTime - halfNightLength)
                     } else {
-                        Time.Companion.fromTotalMilliseconds(
+                        Time.fromTotalMilliseconds(
                             Time(
                                 days = 1,
                                 hour = 0,
@@ -615,7 +615,7 @@ internal object SolarUtils {
                 type == HorizonCrossingSolarState.SET_AND_RISEN
             ) {
                 nightLength?.let { nightLength ->
-                    Time.Companion.fromTotalMilliseconds(prevTime + nightLength.toTotalMilliseconds() / 2)
+                    Time.fromTotalMilliseconds(prevTime + nightLength.toTotalMilliseconds() / 2)
                 }
             } else {
                 null

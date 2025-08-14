@@ -203,7 +203,7 @@ object AstronomicalUtility {
                 }
 
                 val roundedEventTime = hourOfDay + eventParameter
-                val time = Time.Companion.fromTotalMilliseconds((roundedEventTime * 60.0 * 60.0 * 1000.0).toLong())
+                val time = Time.fromTotalMilliseconds((roundedEventTime * 60.0 * 60.0 * 1000.0).toLong())
 
                 if (prevVerticalPosition < 0 && verticalPosition > 0) {
                     val eventRise = Event(
